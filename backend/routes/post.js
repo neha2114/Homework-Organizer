@@ -4,12 +4,14 @@ const router = express.Router();
 
 const { Posts } = require('../models')
 
-router.get("/", (req, res) => {
-    res.json("GET request");
+router.get("/", async (req, res) => {
+    const postList = await Posts.findAll();
+    res.json(postList);
 });
 
 router.post("/", async (req, res) => {
-    const post = req.body
+    const post = req.body;
+    // insert post content into table
     await Posts.create(post);
     res.json(post);
 });
