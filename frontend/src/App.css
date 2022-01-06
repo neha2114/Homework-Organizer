@@ -1,3 +1,11 @@
 .App {
-  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.h3 {
+  text-align: left;
+}
+
+.postInfo {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
 }

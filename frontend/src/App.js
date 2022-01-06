@@ -3,7 +3,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 function App() {
-
   const [postList, setPostList] = useState([]);
   useEffect(() => {
     axios.get("http://localhost:8000/post").then((res) => {
@@ -12,7 +11,8 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div className="App"> 
+      <h3> Homework Organizer </h3>
       {
         postList.map((value, key) => {
             return (
